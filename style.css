@@ -1,0 +1,946 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400&display=swap');
+
+@media screen and (max-width: 768px) {
+    .carousel-logo {
+        width: 100px; /* Reduz o tamanho do logo em dispositivos móveis */
+        top: 10px;
+        right: 10px;
+    }
+
+    .carousel-slogan {
+        font-size: 1rem; /* Reduz o tamanho da fonte do slogan em dispositivos móveis */
+        top: 10px;
+        left: 10px;
+    }
+}
+
+/* Estilos para o logo fixo */
+.fixed-logo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+    transition: opacity 0.5s ease; /* Adiciona uma transição suave */
+}
+
+/* Classe para esconder os elementos */
+.hidden {
+    opacity: 0; /* Torna os elementos transparentes */
+    pointer-events: none; /* Impede interação com os elementos escondidos */
+}
+
+
+/* Estilos do Carrossel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0px; /* Ajuste conforme necessário */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height:800px; /* Ajuste a altura conforme necessário */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 250px;
+    left: 20px;
+    color: white;
+    background-color: rgba(22, 40, 88, 0);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+/* Efeito de hover nos botões de controle */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.311);
+}
+
+/* Responsividade do Carrossel */
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        height: 300px; /* Ajuste a altura para dispositivos móveis */
+    }
+
+    .carousel-caption {
+        font-size: 1rem; /* Reduz o tamanho da fonte para dispositivos móveis */
+        bottom: 10px;
+        left: 10px;
+        padding: 5px 10px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        font-size: 18px; /* Reduz o tamanho dos botões para dispositivos móveis */
+        padding: 8px;
+    }
+}
+.carousel {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Botão do WhatsApp */
+.btn-whatsapp-carousel {
+  margin-top: 10px;
+  text-align: start;
+}
+
+.btn-whatsapp-carousel a {
+  background-color: #0574b9;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-whatsapp-carousel a:hover {
+  background-color: #034a76;
+  transform: scale(1.05); /* Efeito de leve zoom */
+}
+
+header {
+    position: absolute;
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da borda direita */
+    left: auto; /* Garante que a posição à esquerda não interfira */
+    padding: 0; /* Remove qualquer padding que possa causar deslocamento */
+    z-index: 2; /* Garante que esteja acima do fundo */
+    
+}
+
+header .logo {
+    width: 350px; /* Ajuste o tamanho conforme necessário */
+    position: absolute;
+    top: 5px; /* Distância do topo */
+    right: 5px; /* Distância da borda direita */
+    left: auto; /* Garante que a posição à esquerda não interfira */
+    padding: 0; /* Remove qualquer padding que possa causar deslocamento */
+    z-index: 2; /* Garante que esteja acima do fundo */
+}
+
+footer {
+    padding: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer .slogan {
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Adicionar a camada azul transparente */
+.pagina-inicial::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(97, 176, 225, 0.3); /* Azul transparente */
+    z-index: 1; /* Faz a camada ficar acima do fundo */
+}
+
+/* Garantir que os outros elementos fiquem acima da camada azul */
+header, footer {
+    position: relative;
+    z-index: 2;
+}
+/* Estilos gerais para a seção */
+.nossa-missao {
+    background-color: #68b2f338; /* Fundo azul claro */
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    text-align: justify;
+    
+}
+
+/* Estilo do título */
+.nossa-missao .titulo h2 {
+
+    background-color: #004aad; /* Fundo azul do título */
+    color: #f8fbf8; /* Cor do texto */
+    padding: 10px 80px;
+    border-radius: 12px; /* Bordas arredondadas */
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    text-align: right;
+    font-weight: 400;
+    margin-left: -40px;
+    margin-top: 80px;
+    
+}
+
+/* Layout do conteúdo */
+.nossa-missao .conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: -7%;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Estilo da imagem */
+.nossa-missao .conteudo .imagem {
+    flex: 3; /* Define o espaço ocupado */
+    text-align: right; /* Centraliza a imagem */
+}
+
+/* Estilo da imagem */
+.nossa-missao .conteudo .imagem img {
+    width: 100%;
+    max-width: 400px; /* Tamanho máximo da imagem */
+    border-radius: 20px; /* Bordas arredondadas */
+    
+}
+
+/* Estilo do texto */
+.nossa-missao .conteudo .texto {
+    flex: 1; /* Define o espaço ocupado */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.6em;
+    color: #004aad; /* Azul escuro */
+    text-align: justify; /* Alinhamento justificado */
+    max-width: 600px;
+    padding-left: 30px; /* Espaçamento entre texto e imagem */
+    font-weight: bolder;
+}
+
+.nossa-missao .conteudo .texto p {
+    margin-bottom: 20px;
+}
+
+/* Estilo da imagem */
+.nossa-missao .conteudo .imagem img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionado efeito hover */
+}
+
+.nossa-missao .conteudo .imagem img:hover {
+    transform: translateY(-10px); /* Levanta a imagem */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao redor */
+}
+
+/* Estilo das imagens na galeria */
+.foto img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionado efeito hover */
+}
+
+.foto img:hover {
+    transform: translateY(-10px); /* Levanta a imagem */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao redor */
+}
+/* Estilo do título da parte "Seguro" */
+.titulo-seguro {
+    text-align: left;
+    padding: 30px;
+}
+
+.titulo-seguro h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+}
+
+/* Estilo da galeria com as 3 fotos */
+.galeria {
+    display: flex;
+    justify-content:space-evenly;
+    padding: 50px;
+}
+
+.foto {
+    width: 25%;  /* Define 3 fotos de tamanho igual */
+    text-align: center;
+    
+}
+
+.foto img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Adiciona bordas arredondadas nas imagens, se desejar */
+    
+}
+
+.foto p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    color: #f6f6f6;
+    margin-top: 10px;
+    font-weight: bolder;
+
+}
+/* Plano de fundo da seção "Seguro" com gradiente azul */
+.seguro {
+    background: linear-gradient(to right, #5de0e6, #004aad); /* Gradiente azul */
+    color: #fff; /* Cor do texto em branco para contrastar com o fundo azul */
+    padding: 40px 20px;
+}
+.servicos {
+    padding: 50px;
+    background: rgba(97, 176, 225, 0.146); /* Azul transparente */
+    z-index: 1; /* Faz a camada ficar acima do fundo */
+
+  }
+  
+  .titulo-servicos h1 {
+    text-align: start; /* Mantém alinhado ao canto superior esquerdo */
+    font-size: 2.5rem;
+    color: #f8fbf8; /* Texto em branco */
+    background-color: #004aad; /* Fundo azul */
+    padding: 10px 80px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas para parecer um botão */
+    display: inline-block; /* Faz com que o título tome apenas o espaço necessário */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin-bottom: -4px; /* Espaçamento abaixo */
+    font-weight: 400;
+    margin-top: auto;
+    margin-left: -60px;
+    
+    
+  }
+  
+  /* Estilo da Galeria */
+  .galeria {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* Cada Card */
+  .card {
+    background-color: #f8fbf8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px;
+    max-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Efeito ao passar o mouse */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Texto dentro do Card */
+  .card .texto h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #004aad; /* Azul Escuro */
+    text-align: center;
+  }
+  
+  .card .texto p {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  
+ 
+
+  /* Botão do WhatsApp */
+  .btn-whatsapp {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .btn-whatsapp a {
+    background-color: #0574b9;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-whatsapp a:hover {
+    background-color: #034a76;
+    transform: scale(1.05); /* Efeito de leve zoom */
+  }
+  .planos-saude {
+    background: linear-gradient(to right, #5de0e6, #004aad); /* Fundo gradiente */
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .titulo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Layout Principal */
+  .conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 30px 0;
+  }
+  
+  /* Imagem */
+  .imagem img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Texto e Informações */
+  .texto {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .texto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  .texto p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .texto ul {
+    list-style: disc;
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+  
+  .texto ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Botão */
+  .botao {
+    margin-top: 30px;
+  }
+  
+  .botao a {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #004aad;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .botao a:hover {
+    background-color: #004aad;
+    color: #ffffff;
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  }
+  /* Estilo da seção "Sobre Nós" */
+.sobre-nos {
+    padding: 40px 60px; /* Espaçamento interno */
+    /* Centraliza horizontalmente */
+    background-color: #ffffff; /* Fundo branco */
+    background: rgba(97, 176, 225, 0.115); /* Azul transparente */
+    z-index: 1; /* Faz a camada ficar acima do fundo */
+    
+  }
+  
+  /* Estilo do título */
+  .sobre-nos .titulo h1 {
+    background-color: #004aad; /* Fundo azul */
+    color: white; /* Cor do texto */
+    padding: 10px 100px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    display: inline-block;
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    margin-left: -80px;
+    font-weight: 400;
+  }
+  
+  /* Layout principal */
+  .sobre-nos .conteudo {
+    display: flex; /* Define layout em linha */
+    text-align: justify;
+    gap: 100px; /* Espaço entre os elementos */
+  }
+  
+  /* Estilo do texto à esquerda */
+  .sobre-nos .descricao {
+    flex: 1.5; /* Ocupa mais espaço do lado esquerdo */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    color: #004aad; /* Azul escuro */
+    line-height: 1.6em; /* Espaçamento entre as linhas */
+    text-align: justify; /* Texto justificado */
+    margin-top: -5,mn0px;
+  }
+
+  
+  /* Estilo da foto e descrição */
+  .sobre-nos .foto-descricao {
+    flex: 1; /* Ocupa menos espaço no lado direito */
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Centraliza conteúdo no eixo vertical */
+    text-align: justify; /* Centraliza o texto abaixo */
+  }
+  
+  /* Estilo da foto */
+  .sobre-nos .foto img {
+    width: 400%;
+    max-width: 300px; /* Tamanho máximo da imagem */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+  }
+  
+  /* Texto abaixo da foto */
+  .sobre-nos .foto-descricao .texto-descricao {
+    margin-top: 20px; /* Espaçamento acima do texto */
+    font-size: 1rem; /* Tamanho do texto */
+    color: #004aad; /* Cor do texto azul */
+  }
+  
+  .sobre-nos .foto-descricao .texto-descricao p:last-child {
+    font-weight: bold; /* Última linha em negrito */
+    margin-top: 10px; /* Espaçamento superior */
+  }
+
+  /* Container geral do "Fale Conosco" */
+.fale-conosco-container {
+    background-color: #2a4364;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 40px;
+    color: #f8fbf8;
+  }
+  
+  /* Coluna da esquerda (informações de contato) */
+  .left-column {
+    width: 45%;
+  }
+  
+  /* Coluna da direita (formulário de contato) */
+  .right-column {
+    width: 45%;
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 400
+  }
+  
+  /* Endereço */
+  .address p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Mapa do Google */
+  .map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Informações de contato */
+  .contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Formulário de contato */
+  .form-container input,
+  .form-container textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .form-container textarea {
+    height: 120px;
+  }
+  
+  .form-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .form-container button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Rodapé */
+  .logo-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a4364;
+    position: relative;
+  }
+  
+  .logo-footer img {
+    width: 150px;
+  }
+
+  /* Estilos para dispositivos móveis (telas menores que 768px) */
+@media screen and (max-width: 768px) {
+  body, html {
+    font-size: 90%; /* Ajusta o tamanho da fonte geral */
+  }
+
+  .pagina-inicial {
+    background-position: top; /* Ajusta o fundo para telas menores */
+    flex-direction: column; /* Empilha os elementos verticalmente */
+  }
+
+  header .logo {
+    width: 200px; /* Reduz o tamanho da logo */
+  }
+
+  .nossa-missao .conteudo {
+    flex-direction: column; /* Empilha imagem e texto */
+    text-align: center;
+  }
+
+  .nossa-missao .conteudo .imagem,
+  .nossa-missao .conteudo .texto {
+    max-width: 100%; /* Ajusta o tamanho para caber na tela */
+    padding: 10px;
+  }
+
+  .galeria {
+    flex-direction: column;
+    gap: 20px; /* Adiciona espaço entre os itens */
+  }
+
+  .card {
+    max-width: 100%; /* Faz o card ocupar toda a largura disponível */
+  }
+
+  .sobre-nos .conteudo {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .sobre-nos .foto img {
+    max-width: 90%; /* Reduz a imagem para caber na tela */
+  }
+
+  .fale-conosco-container {
+    flex-direction: column; /* Empilha colunas */
+    gap: 20px;
+  }
+
+  .left-column, 
+  .right-column {
+    width: 100%; /* Faz as colunas ocuparem 100% da largura */
+  }
+
+  .btn-whatsapp a {
+    padding: 10px 20px; /* Ajusta o tamanho do botão */
+    font-size: 1rem; /* Reduz o texto do botão */
+  }
+}
+
+/* Estilos para dispositivos muito pequenos (telas menores que 480px) */
+@media screen and (max-width: 480px) {
+  .titulo h2,
+  .titulo-servicos h1 {
+    font-size: 1.8rem; /* Reduz os tamanhos de fontes grandes */
+    padding: 5px 20px; /* Ajusta o espaçamento interno */
+  }
+
+  .sobre-nos .foto img {
+    max-width: 100%; /* Ocupa 100% da largura disponível */
+  }
+
+  .form-container input, 
+  .form-container textarea {
+    width: 100%; /* Ajusta a largura para caber na tela */
+  }
+
+  .form-container button {
+    width: 100%; /* Torna o botão mais acessível em telas pequenas */
+  }
+}
+/* Estilos para o botão flutuante do WhatsApp */
+.whatsapp-btn {
+  position: fixed; /* Fixa o botão na tela */
+  bottom: 20px; /* Distância da parte inferior da tela */
+  right: 20px; /* Distância da parte direita da tela */
+  background-color: #1e3053; /* Cor do botão */
+  border-radius: 50%; /* Torna o botão redondo */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  padding: 15px; /* Espaçamento interno */
+  z-index: 9999; /* Garante que o botão fique na frente */
+}
+
+.whatsapp-btn img {
+  width: 30px; /* Ajusta o tamanho do ícone */
+  height: 30px; /* Ajusta o tamanho do ícone */
+  display: block;
+}
+
+.whatsapp-btn:hover {
+  background-color: #eef1eee4; /* Cor do botão ao passar o mouse */
+}
+/* Adicionando animação de pulso ao botão */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.whatsapp-btn.pulse-animation {
+  animation: pulse 1s infinite; /* Animação que se repete infinitamente */
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fafafa;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(10px);
+}
+
+.whatsapp-btn.visible {
+  transform: translateY(0); /* Aplique o "deslize" para a posição final */
+}
+
+.whatsapp-btn:hover {
+  background-color: #dbebf6;
+}
+
+/* CSS: Animação para quando elementos aparecem na tela */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Área de Hover Acima da Navbar */
+.navbar-hover-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px; /* Altura da área de hover */
+  z-index: 1001; /* Garante que esteja acima de tudo */
+}
+
+/* Navbar Oculta Inicialmente */
+.navbar {
+  position: fixed;
+  top: 0px; /* Escondida no topo inicialmente */
+  left: 0;
+  width: 100%;
+  height: 60px; /* Altura da navbar */
+  background-color: rgba(240, 240, 240, 0); /* Foco no translúcido */
+  z-index: 1000; /* Abaixo da área de hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 1.0s ease-in-out; /* Animação suave */
+}
+
+/* Classe para esconder a navbar */
+.navbar.hidden {
+  transform: translateY(-100%); /* Move a navbar para fora da viewport */
+}
+/* Mostrar a Navbar ao Passar o Mouse na Área */
+.navbar-hover-area:hover + .navbar,
+.navbar:hover {
+  top: 0; /* Traz a navbar para dentro da tela */
+  height: 100px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;  /* Espalha logo e links */
+  align-items: center;
+  max-width: 1200px;  /* Máximo de largura da navbar */
+  margin: 0 auto;
+  padding: 10px 20px; /* Espaçamento interno da barra */
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  color: #b7b3b3;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;  /* Flexível para que o conteúdo ocupe o espaço disponível */
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 0;
+}
+
+.nav-links a:hover {
+  color: #3a98f5;  /* Cor de destaque ao passar o mouse */
+}
+
+/* Estilos para o logo na navbar */
+.navbar-logo img {
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-top: 150px;
+}
+
+
+.main-header {
+  background: url('imagem-de-fundo.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;  /* Faz o header ter 100% da altura da janela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.main-header h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.main-header p {
+  font-size: 1.5rem;
+}

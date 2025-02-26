@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar-hover-area"></div>
+    <nav class="navbar">
+        
+        <div class="menu-icon"></div>
+            <ul class="nav-links">
+                <li><a href="#servicos">Seguros</a></li>
+                <li><a href="#planos-saude">Planos</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+        <div class="navbar-logo">
+            <a href="index.html">
+                <img src="imagens/logo-2.png" alt="Logo Alessa">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Carrossel de Imagens -->
+    <div class="carousel">
+       
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                
+                <img src="imagens/carrogif.gif" alt="Seguro Automóvel">
+                
+                <div class="carousel-caption">
+                    <h3>Seguro Automóvel</h3>
+                    <p>Proteja seu veículo com o melhor seguro.</p>
+                    <!-- Botão "Fale Conosco" -->
+                    <div class="btn-whatsapp-carousel">
+                        <a href="https://wa.link/shxokr" target="_blank" title="Fale conosco pelo Whats">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/aviaogif.gif" alt="Seguro Aeronáutico">
+                <div class="carousel-caption">
+                    <h3>Seguro Aeronáutico</h3>
+                    <p>Segurança para sua aeronave.</p>
+                    <!-- Botão "Fale Conosco" -->
+                    <div class="btn-whatsapp-carousel">
+                        <a href="https://wa.link/shxokr" target="_blank" title="Fale conosco pelo Whats">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/barcogif.gif" alt="Seguro Náutico">
+                <div class="carousel-caption">
+                    <h3>Seguro Náutico</h3>
+                    <p>Proteja sua embarcação.</p>
+                    <!-- Botão "Fale Conosco" -->
+                    <div class="btn-whatsapp-carousel">
+                        <a href="https://wa.link/shxokr" target="_blank" title="Fale conosco pelo Whats">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/vidagif.gif" alt="Seguro de Vida">
+                <div class="carousel-caption">
+                    <h3>Seguro de Vida</h3>
+                    <p>Garanta o futuro da sua família.</p>
+                    <!-- Botão "Fale Conosco" -->
+                    <div class="btn-whatsapp-carousel">
+                        <a href="https://wa.link/shxokr" target="_blank" title="Fale conosco pelo Whats">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/planogif.gif" alt="Planos de Saúde">
+                <div class="carousel-caption">
+                    <h3>Planos de Saúde</h3>
+                    <p>Cuide da sua saúde com os melhores planos.</p> 
+                    <div class="btn-whatsapp-carousel">
+                        <a href="https://wa.link/shxokr" target="_blank" title="Fale conosco pelo Whats">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <!-- Logo fixo no canto superior direito -->
+
+
+    <section class="nossa-missao animate">
+      <div class="titulo animate">
+        <section id="mission">
+          <h2>Nossa Missão</h2>
+      </div>
+      <div class="conteudo animate">
+          <div class="imagem animate">
+              <img src="imagens/alvo.png" alt="Imagem ilustrativa">
+          </div>
+          <div class="texto animate">
+              <p>Alessa significa proteção, e é exatamente isso que queremos proporcionar. Segurança e tranquilidade.</p>
+              <p>Nossa missão é cuidar do que realmente importa, com atendimento dedicado e personalizado.</p>
+              <p>Venha conhecer nossos serviços e descubra como podemos ajudar e proteger o seu futuro.</p>
+              <p>Conte conosco!</p>
+          </div>
+      </div>
+  </section>
+  
+  <section class="seguro animate">
+      <div class="titulo-seguro animate">
+          <h2>Ter um seguro é..</h2>
+      </div>
+      <div class="galeria animate">
+          <div class="foto animate">
+              <img src="imagens/casa.png" alt="Foto 1">
+              <p>PROTEÇÃO CONTRA INCERTEZAS</p>
+          </div>
+          <div class="foto animate">
+              <img src="imagens/vida.png" alt="Foto 2">
+              <p>TRANQUILIDADE PARA O FUTURO</p>
+          </div>
+          <div class="foto animate">
+              <img src="imagens/carro.png" alt="Foto 3">
+              <p>VALORIZAÇÃO DO PATRIMÔNIO</p>
+          </div>
+      </div>
+  </section>
+  
+  <section class="servicos animate">
+    <div class="titulo-servicos animate">
+        <section id="servicos">
+        <h1>Nossos Seguros</h1>
+    </div>
+    <div class="galeria animate">
+        <div class="card animate">
+            <img src="imagens/automovel.jpeg" alt="Serviço 1">
+            <div class="texto animate">
+                <h2>Seguro Automóvel</h2>
+                <p>
+                    Essencial para garantir a proteção do seu veículo e a sua tranquilidade.
+                    <p>Oferece cobertura contra roubos, furtos, acidentes e danos a terceiros, incluindo assistência 24 horas. </p><p>Um seguro adequado pode evitar gastos inesperados e proporcionar segurança para você e sua família.</p>
+                </p>
+            </div>
+        </div>
+        <div class="card animate">
+            <img src="imagens/vida.jpeg" alt="Serviço 2">
+            <div class="texto animate">
+                <h2>Seguro <br>Vida</h2>
+                <p>
+                    <p>O Seguro de Vida é uma proteção financeira.</p> <p>
+                      Oferece coberturas em caso de falecimento, invalidez total ou parcial por acidente, diagnósticos de doenças graves, despesas médicas ou hospitalares e até auxílio financeiro em vida.
+                    </p>
+                </p>
+            </div>
+        </div>
+        <div class="card animate">
+            <img src="imagens/nautico.jpeg" alt="Serviço 3">
+            <div class="texto animate">
+                <h2>Seguro <br> Náutico</h2>
+                <p>
+                    <p>É uma proteção indispensável para embarcações como lanchas, veleiros, jet skis e iates. </p>
+                   <p>
+                     Cobre danos causados por acidentes, roubo, furto, incêndio e fenômenos da natureza,
+                     remoção de destroços e responsabilidade civil por danos a terceiros.
+                   </p>
+                </p>
+            </div>
+        </div>
+        <div class="card animate">
+            <img src="imagens/aeronautico.jpeg" alt="Serviço 4">
+            <div class="texto animate">
+                <h2>Seguro Aeronáutico</h2>
+                <p>
+                    Proteção completa para aeronaves, cobre danos causados por acidentes, roubo, incêndio e fenômenos da natureza. 
+                    <p>Inclui responsabilidade civil contra terceiros, passageiros e cargas, garantindo segurança financeira para os proprietários e operadores.</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="btn-whatsapp animate">
+        <a href="https://wa.link/shxokr" target="_blank">Fale Conosco</a>
+    </div>
+</section>
+  
+  <section class="planos-saude animate">
+      <div class="titulo animate">
+        <section id="planos-saude">
+          <h1>Planos de Saúde</h1>
+      </div>
+      <div class="conteudo animate">
+          <div class="imagem animate">
+              <img src="imagens/video-convenio.gif" alt="Animação Planos de Saúde">
+          </div>
+          <div class="texto animate">
+              <h2>Você merece cuidado e proteção em todos os momentos</h2>
+              <p>
+                  Com nossos planos de saúde, você garante atendimento médico de qualidade, acesso a hospitais renomados e cobertura que se adapta às suas necessidades.
+              </p>
+              <ul>
+                  <li>Consultas, exames e internações cobertos.</li>
+                  <li>Planos individuais, familiares e empresariais.</li>
+                  <li>Rede credenciada com os melhores profissionais.</li>
+                  <li>Atendimento rápido e humanizado.</li>
+              </ul>
+              <p>
+                  Estamos à disposição para fornecer informações detalhadas sobre os planos e realizar uma cotação personalizada. Entre em contato conosco.
+              </p>
+          </div>
+      </div>
+      <div class="botao animate">
+          <a href="https://wa.link/shxokr" target="_blank">CLIQUE AQUI</a>
+      </div>
+  </section>
+  
+  <section class="sobre-nos animate">
+      <div class="titulo animate">
+        <section id="sobre-nos">
+          <h1>SOBRE NÓS</h1>
+      </div>
+      <div class="conteudo animate">
+          <div class="descricao animate">
+              <p>
+                <p>Somos a Alessa Corretora de Seguros, uma empresa comprometida em cuidar do que mais importa para você. Inspirados pelo significado de nosso nome, que representa proteção, temos como missão oferecer soluções personalizadas e completas para garantir sua segurança e tranquilidade <br></p>
+
+                <p>Atuamos com uma ampla gama de seguros, incluindo Náutico, Aeronáutico, Automóvel e Planos de Saúde. Com um atendimento humanizado e focado nas suas necessidades, trabalhamos para oferecer um atendimento dedicado e personalizado, garantindo as melhores opções do mercado e o suporte que você precisa.</p> 
+                
+                Na Alessa, cada cliente é único, e cada proteção é planejada com dedicação. Venha descobrir como podemos cuidar do seu futuro com a confiança e o suporte que você merece!
+              </p>
+          </div>
+          <div class="divisor"></div>
+          <div class="foto-descricao animate">
+              <div class="foto">
+                  <img src="imagens/foto-pessoal.jpg" alt="Foto Stefanie Altimare">
+              </div>
+              <div class="texto-descricao">
+                  <p>
+                      Diretora executiva, formada em Relações Internacionais, capacitada pela Escola Nacional de Seguros, uma instituição autorizada pela Superintendência de Seguros Privados. Fundadora e proprietária da Alessa Corretora de Seguros.
+                  </p>
+                  <p><strong>Stefanie Altimare</strong></p>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+      <div class="fale-conosco-container">
+        <!-- Coluna da esquerda (informações de contato) -->
+        <div class="left-column">
+            <section id="contact">
+          <h1>Fale Conosco</h1>
+    
+          <!-- Endereço -->
+          <div class="address">
+            <p>Escritório <br>
+                Aeroporto Campo de Marte <br>
+                Av. Olavo Fontoura, 1078, Hangar Rotors 1 <br>Santana, São Paulo - SP</p>
+          </div>
+    
+          <!-- Mapa do Google -->
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4153.606547576116!2d-46.645553633263745!3d-23.51488436684977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59df224c1703%3A0xa3465c6b351a393d!2sAlessa%20Corretora%20de%20Seguros!5e1!3m2!1spt-BR!2sbr!4v1736196807219!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+    
+          <!-- Informações de contato -->
+          <div class="contact-info">
+            Tel.: (11) 91660-2405 <br>
+            E-mail: stefanie.altimare@alessaseguros.com
+            <br>
+            Instagram: @alessa.seguros
+          </div>
+        </div>
+    
+        <!-- Coluna da direita (formulário de contato) -->
+        <div class="right-column">
+          <h1>Entre em Contato</h1>
+          <div class="form-container">
+            <form action="enviar-email.php" method="post" method="post" enctype="text/plain">
+              <input type="text" name="nome" placeholder="Seu nome" required>
+              <input type="email" name="email" placeholder="Seu email" required>
+              <input type="tel" name="telefone" placeholder="Seu telefone" required>
+              <textarea name="mensagem" placeholder="Sua mensagem" required></textarea><br>
+              <button type="submit">Enviar</button>
+            </form>
+            <div id="response"></div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Rodapé com o logotipo -->
+      <footer class="logo-footer">
+        <img src="imagens/logo branca.png" alt="Logo da Empresa">
+      </footer>
+      <a href="https://wa.link/shxokr" class="whatsapp-btn" target="_blank" title="Fale Conosco pelo WhatsApp">
+        <img src="imagens/whatsapp.png">
+      </a>
+      <script>
+        // Espera o carregamento completo da página
+        window.addEventListener('load', function() {
+          const whatsappButton = document.querySelector('.whatsapp-btn');
+          
+          // Adiciona o efeito "deslize" após o carregamento da página
+          setTimeout(() => {
+            whatsappButton.classList.add('visible');
+          }, 300); // Animação começa 300ms após o carregamento
+      
+          // Efeito de "pulse" ao passar o mouse
+          whatsappButton.addEventListener('mouseenter', () => {
+            whatsappButton.classList.add('pulse-animation');  // Inicia o efeito de pulso
+          });
+      
+          whatsappButton.addEventListener('mouseleave', () => {
+            whatsappButton.classList.remove('pulse-animation');  // Remove o efeito de pulso
+          });
+        });
+      </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona todos os elementos com a classe "fade-in"
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    // Função para verificar se o elemento está visível
+    function checkVisibility() {
+      fadeElements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.top <= window.innerHeight;
+
+        // Se o elemento está visível, adiciona a classe "visible"
+        if (isVisible) {
+          element.classList.add('visible');
+        }
+      });
+    }
+
+    // Verificar visibilidade a cada scroll
+    window.addEventListener('scroll', checkVisibility);
+    
+    // Rodar a verificação ao carregar a página, para garantir que o conteúdo visível já aparece
+    checkVisibility();
+  });
+</script>
+<script src="script.js"></script>
+      
+  </body>
+</html>
